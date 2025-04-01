@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-cyan-600">Portfolio</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-cyan-600">Home</a>
+                    <a href="#about" class="hover:text-cyan-600">About</a>
+                    <a href="#projects" class="hover:text-cyan-600">Projects</a>
+                    <a href="#contact" class="hover:text-cyan-600">Contact</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <div class="px-4 py-2 space-y-3">
+                <a href="#home" class="block hover:text-cyan-600">Home</a>
+                <a href="#about" class="block hover:text-cyan-600">About</a>
+                <a href="#projects" class="block hover:text-cyan-600">Projects</a>
+                <a href="#contact" class="block hover:text-cyan-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 md:pt-32 pb-16 bg-gradient-to-br from-cyan-50 to-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Hi, I'm <span class="text-cyan-600">John Doe</span></h1>
+                    <p class="text-lg text-gray-600 mb-8">Full Stack Developer passionate about creating beautiful and functional web experiences</p>
+                    <a href="#contact" class="bg-cyan-600 text-white px-8 py-3 rounded-full hover:bg-cyan-700 transition">Get in Touch</a>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80" alt="Developer" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <i class="bi bi-code-slash text-4xl text-cyan-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Web Development</h3>
+                    <p class="text-gray-600">Specialized in building modern and responsive websites using latest technologies</p>
+                </div>
+                <div class="text-center p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <i class="bi bi-phone text-4xl text-cyan-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Mobile First</h3>
+                    <p class="text-gray-600">Creating responsive designs that work seamlessly across all devices</p>
+                </div>
+                <div class="text-center p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <i class="bi bi-graph-up text-4xl text-cyan-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Performance</h3>
+                    <p class="text-gray-600">Optimizing applications for maximum speed and scalability</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">My Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Cards -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&q=80" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">A full-featured online shopping platform built with React and Node.js</p>
+                        <div class="flex space-x-2">
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Task Manager</h3>
+                        <p class="text-gray-600 mb-4">A collaborative task management application with real-time updates</p>
+                        <div class="flex space-x-2">
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Vue.js</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Analytics Dashboard</h3>
+                        <p class="text-gray-600 mb-4">Data visualization dashboard with interactive charts and reports</p>
+                        <div class="flex space-x-2">
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">D3.js</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Get in Touch</h2>
+            <div class="max-w-lg mx-auto">
+                <form class="space-y-6" onsubmit="handleSubmit(event)">
+                    <div>
+                        <label for="name" class="block text-gray-700 mb-2">Name</label>
+                        <input type="text" id="name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-600">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-600">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 mb-2">Message</label>
+                        <textarea id="message" required rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-600"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-cyan-600 text-white py-3 rounded-lg hover:bg-cyan-700 transition">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">John Doe</h3>
+                    <p class="text-gray-400">Full Stack Developer</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-cyan-400"><i class="bi bi-github text-2xl"></i></a>
+                    <a href="#" class="hover:text-cyan-400"><i class="bi bi-linkedin text-2xl"></i></a>
+                    <a href="#" class="hover:text-cyan-400"><i class="bi bi-twitter text-2xl"></i></a>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p class="text-gray-400">&copy; 2023 John Doe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send this data to a server
+            console.log('Form submitted:', { name, email, message });
+            alert('Thank you for your message! I will get back to you soon.');
+            event.target.reset();
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
